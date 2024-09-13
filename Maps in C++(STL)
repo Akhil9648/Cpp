@@ -1,0 +1,17 @@
+#include<iostream>
+#include<map>
+using namespace std;
+int main()
+{
+    map<string, int>marksMap;
+    marksMap["Harry"]=45;
+    marksMap["Rahul"]=98;
+    marksMap["Anshu"]=2;
+    marksMap.insert({{"Anshika"s,169},{"Arun",178}});
+    map.sort();
+    map<string, int> ::iterator iter;
+    for(iter=marksMap.begin();iter!=marksMap.end();iter++)
+    {
+        cout<<(*iter).first<<" "<<(*iter).second<<"\n";
+    }
+}
