@@ -1,0 +1,15 @@
+#include<iostream>
+#include<map>
+using namespace std;
+int main()
+{
+    map<string,int> m;
+    m["apple"]=50;
+    m.insert({"banana",40});
+    m.insert({"Kiwi",20});
+    cout<<"Elements in map after Insertion:\n";
+    for(auto it:m)
+    {
+        cout<<it.first<<"->"<<it.second<<endl;
+    }
+}
