@@ -19,6 +19,7 @@ int main()
     list1.push_back(0);
     list1.push_back(1);
     list1.pop_back();
+    list1.sort();
     display(list1);
     list<int> list2(3);
     list<int> :: iterator iter;
@@ -29,6 +30,7 @@ int main()
     iter++;
     *iter=5;
     iter++;
+    list2.sort();
     display(list2);
     
 }
