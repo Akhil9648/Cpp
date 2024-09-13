@@ -8,7 +8,6 @@ int main()
     marksMap["Rahul"]=98;
     marksMap["Anshu"]=2;
     marksMap.insert({{"Aakash"s,169},{"Arun",178}});
-    map.sort();
     map<string, int> ::iterator iter;
     for(iter=marksMap.begin();iter!=marksMap.end();iter++)
     {
