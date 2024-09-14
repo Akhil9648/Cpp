@@ -1,0 +1,15 @@
+#include <iostream>
+#include<map>
+using namespace std;
+int main() {
+    map<int,string> m;
+    m[1]="abc";
+    m[5]="def";
+    m[3]="Wagon";
+    m.insert({4,"Loop"});
+    for(auto it=m.begin();it!=m.end();it++)
+    {
+        cout<<(*it).first<<" "<<(*it).second<<" ";
+    }
+    return 0;
+}
