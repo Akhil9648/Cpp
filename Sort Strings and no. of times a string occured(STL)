@@ -1,0 +1,23 @@
+#include <iostream>
+#include<map>
+using namespace std;
+void display(map<string,int> &m1)
+{
+    for(auto it:m1)
+    {
+        cout<<it.first<<" "<<it.second<<" ";
+    }
+}
+int main() {
+    map<string,int> m;
+    int n;
+    cin>>n;
+    for(auto i=0;i<n;i++)
+    {
+        string s;
+        cin>>s;
+        m[s]++;
+    }
+    display(m);
+    return 0;
+}
