@@ -1,0 +1,39 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<vector>
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int n,flag=0;
+    cout<<"Enter the size of array:";
+    cin>>n;
+    vector<int> arr;
+    cout<<"Enter the elements:";
+    for(int i=0;i<n;i++)
+    {
+        int b;
+        cin>>b;
+        arr.push_back(b);
+    }
+    sort(arr.begin(),arr.end());
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                flag=1;
+                break;
+            }
+        }
+    }
+    if(flag==1)
+    {
+        cout<<"True";
+    }
+    else
+    {
+        cout<<"False";
+    }
+    return 0;
+}
