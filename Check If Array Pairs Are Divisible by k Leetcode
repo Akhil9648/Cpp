@@ -1,0 +1,48 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+bool canarrange(vector<int> &arr,int k)
+{
+    vector <int> mp(k,0);
+    for(int &num:arr)
+    {
+        int rem=num%k;
+        mp[rem]++;
+    }
+    if(mp[0]%2!=0)
+    {
+        return 0;
+    }
+    for(int rem=1;rem<=k/2;rem++)
+    {
+        int counterhalf=k-rem;
+        if(mp[counterhalf]!=mp[rem])
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+int main() {
+    int n,k;
+    cout<<"Enter the size of array and k:";
+    cin>>n>>k;
+    vector<int> arr;
+    cout<<"Enter the elements of array:";
+    for(int i=0;i<n;i++)
+    {
+        int b;
+        cin>>b;
+        arr.push_back(b);
+    }
+    int a=canarrange(arr,k);
+    if(a==1)
+    {
+        cout<<"True";
+    }
+    else
+    {
+        cout<<"False";
+    }
+    return 0;
+}
