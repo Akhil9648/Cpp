@@ -39,6 +39,7 @@ int countsort(int arr[],int n)
             i++;
         }
     }
+return 1;
 }
 int main() {
     int n;
