@@ -22,6 +22,10 @@ int main() {
         {
             count++;
         }
+        else if(arr[i+1]==k)
+        {
+            continue;
+        }
         else
         {
             break;
@@ -36,3 +40,4 @@ int main() {
     cout<<count;
     return 0;
 }
+//BruteForce Approach
