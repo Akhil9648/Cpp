@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+void merge(int A[], int l, int mid, int h) {
+    int i = l;
+    int j = mid + 1;
+    int k = 0;
+    int B[h - l + 1];
+
+    while (i <= mid && j <= h) {
+        if (A[i] <= A[j]) {
+            B[k++] = A[i++];
+        } else {
+            B[k++] = A[j++];
+        }
+    }
+
+    while (i <= mid) {
+        B[k++] = A[i++];
+    }
+
+    while (j <= h) {
+        B[k++] = A[j++];
+    }
+
+    for (int i = 0; i < k; i++) {
+        A[l + i] = B[i];
+    }
+
+}
+
+void MG(int A[], int l, int h) {
+    if (l < h) {
+        int mid = l + (h - l) / 2;
+        MG(A, l, mid);
+        MG(A, mid + 1, h);
+        merge(A, l, mid, h);
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter the size of array: ";
+    cin >> n;
+    
+    int* arr = new int[n];
+    cout << "Enter the elements of the array: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    MG(arr, 0, n - 1);
+
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+
+    return 0;
+}
