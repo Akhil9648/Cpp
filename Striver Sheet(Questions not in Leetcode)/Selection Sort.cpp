@@ -21,3 +21,7 @@ int main() {
     for(int i:arr) cout<<i<<" ";
     return 0;
 }
+
+Time Complexity-
+Best-O(n^2)
+Worst-O(n^2)
